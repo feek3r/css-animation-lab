@@ -1,0 +1,55 @@
+body{
+    background-color: black;
+ 
+}
+
+:root{
+    --kolor:black;
+    --card-border: rgba(255,255,255,0.08);
+    --blue-glow:rgba(77,163,255,0.32);
+}
+
+#element{
+    
+    background-color: var(--kolor); 
+    height: 44px;
+    width: 44px;
+    border-radius: 200%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid var(--card-border);
+    box-shadow: 0 0 0 40px var(--kolor), 0 0 24px var(--blue-glow);
+}
+
+
+
+#linia::before{
+    content: "";
+    position:absolute;
+    left: 50%;
+    top: 5%;
+    width: 1px;
+    height: 26%;
+    transform: translateX(-50%);
+    background:linear-gradient(to bottom , transparent , blue , transparent );
+    animation: travel 3.6s ease-in-out infinite;
+
+}
+
+#svg{
+    background-image: url(kolko.svg);
+    height: 100%;
+    width: 100%;
+   background-size: contain;
+   background-position: center;
+   
+}
+
+@keyframes travel {
+    0%   { top: 0%; opacity: 0; }
+    15%  { opacity: 1; }
+    85%  { opacity: 1; }
+    100% { top: 70%; opacity: 0; }
+}
