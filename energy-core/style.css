@@ -47,8 +47,8 @@ body{
     width: 1px;
     height: 26%;
     transform: translateX(-50%);
-    background:linear-gradient(to bottom , transparent , blue , transparent );
-    animation: travel 3.6s ease-in-out infinite;
+    background:linear-gradient(to bottom , blue , gold , red );
+    animation: travel 3.6s ease-in-out infinite; 
 
 }
 

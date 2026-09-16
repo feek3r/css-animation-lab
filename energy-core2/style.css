@@ -1,0 +1,67 @@
+body{
+    background-color: rgba(28, 5, 79, 0.703);
+}
+
+#kolko{
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    height: 44px;
+    width: 44px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    box-shadow: 0 0 30px 10px black, 0 0 15px 10px blue;
+    border: 1px solid red;
+
+}
+
+#obrazek{
+
+    background-image: url(kolko.svg) ;
+    background-size: contain;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    
+}
+
+#linia{
+    position: fixed;
+    inset: 0;
+}
+
+#linia::before{
+    content: "";
+    height: 2px;
+    width: 25%;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    background: linear-gradient(to bottom, red,red,red,red);
+    animation: linia 7s infinite;
+}
+
+@keyframes linia {
+    0%{
+        right:0%;
+        opacity: 0;
+    }
+
+    15%{
+        
+        
+        opacity: 1;
+    }
+
+    70%{
+        opacity: 1;
+    }
+
+
+    100%{
+        right: 100%;
+        opacity: 0;
+    }
+}
