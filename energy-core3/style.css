@@ -1,0 +1,61 @@
+body{
+    background-color: rgb(4, 4, 103);
+}
+
+#linia{
+    position: fixed;
+    inset: 0;
+}
+
+
+#kolo{
+
+    position: absolute;
+    height: 77px;
+    width: 77px;
+    border-radius: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 0 12px 5px blue, 0 0 12px 12px red;
+
+}
+
+
+#img{
+
+    height: 100%;
+    width: 100%;
+    background-image: url(star.svg);
+    background-position: center;
+    background-size: contain;
+
+}
+
+#linia::before{
+    content:"";
+    position:absolute;
+    background: linear-gradient(to bottom,red,red,red,red);
+    width: 2px;
+    height: 26%;
+    left: 50%;
+    bottom: 60%;
+    animation:ani 3s ease-in-out infinite;
+}
+
+@keyframes ani {
+    
+from { 
+    top:0%
+}
+
+50%{
+    opacity: 0;
+}
+
+
+to{
+    top:80%;
+}
+
+}
